@@ -1,0 +1,17 @@
+# STM32CubeIDE
+.mxproject
+.settings/
+
+
+# Build
+Debug/
+Release/
+build/
+
+# Object / binary
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.launch
