@@ -19,9 +19,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include <stdio.h>
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 #define N_SEC 5000
 /* USER CODE END Includes */
 
@@ -55,7 +56,7 @@ osThreadId_t myTask02Handle;
 const osThreadAttr_t myTask02_attributes = {
   .name = "myTask02",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
 
@@ -80,7 +81,7 @@ int __io_putchar(int ch){
 }
 
 void print_msg(int i){
-	  printf("Task %d\r\n", i);
+	  printf("Task %d\n\r", i);
 }
 
 /* USER CODE END 0 */
@@ -116,7 +117,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  printf("This is a test message before FreeRTOS is running. \n\r");
+  printf("This is a test message before FreeRTOS is running. \r\n");
 
   /* USER CODE END 2 */
 
